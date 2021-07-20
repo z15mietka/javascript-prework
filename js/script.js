@@ -1,7 +1,23 @@
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-printMessage('Zagrałem ' + 'kamień' + '! Jeśli Twój ruch to papier, to wygrywasz!');
+console.log('Gracz wpisał: ' + playerInput);
 
+let playerMove = 'nieznany ruch';
 
-let playerMove = `papier`;
+if(playerInput == '1'){
+  playerMove = 'kamień';
+}
 
-printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+printMessage('Twój ruch to: ' + computerMove);
+
+else if(computerMove == '2'){
+    computerMove = 'papier';
+  }
+  
+  printMessage('Twój ruch to: ' + playerMove);
+
+} else if playerMove == '3'){
+    computerMove = 'nozyce';
+  }
+  
+  printMessage('Twój ruch to: ' + computerMove);
