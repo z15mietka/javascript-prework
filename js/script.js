@@ -44,3 +44,7 @@ else if(computerMove == '2'){
   }
   
   printMessage('Twój ruch to: ' + computerMove);
+
+  if( computerMove == 'kamień' && playerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+  }
