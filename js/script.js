@@ -12,8 +12,15 @@ if(playerInput == '1'){
 } else if(playerMove == '3'){
     playerMove = 'nozyce';
 }
+let computerMove = 'nieznany ruch';
 
-
+if(computerInput == '1'){
+    computerMove = 'kamień';
+  } else if(computerMove == '2'){
+      computerMove = 'papier';
+  } else if(computerMove == '3'){
+      computerMove = 'nozyce';
+  }
 
 
 if( computerMove == 'kamień' && playerMove == 'papier'){
@@ -32,7 +39,7 @@ if( playerMove == 'kamień' && computerMove == 'papier'){
     printMessage('Ty przegrywasz!');
   }
 
-  if( computerMove == 'kamień' && playerMove == 'kamien'){
+if( computerMove == 'kamień' && playerMove == 'kamien'){
     printMessage('Remis!');
   } else if ( computerMove == 'papier' && playerMove == 'papier'){
     printMessage('Remis!');
