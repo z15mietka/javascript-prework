@@ -7,3 +7,14 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+
+function getMoveName(playerInput) {
+	if(playerInput == '1'){
+	playerMove = 'kamień';
+  } else if(playerInput== '2'){
+	playerMove = 'papier';
+  } else if(playerInput == '3'){
+	playerMove = 'nozyce';
+  }
+  return playerMove
+  }
