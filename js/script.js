@@ -1,20 +1,24 @@
-function getMoveName(playerInput) {
-	if(playerInput == '1'){
-	playerMove = 'kamień';
-  } else if(playerInput== '2'){
-	playerMove = 'papier';
-  } else if(playerInput == '3'){
-	playerMove = 'nozyce';
+let move = 'nieznany ruch';
+
+
+
+function getMoveName(Input) {
+	if(Input == '1'){
+	Move = 'kamień';
+  } else if(Input== '2'){
+	Move = 'papier';
+  } else if(Input == '3'){
+	Move = 'nozyce';
   }
-  return playerMove
+  return Move
   }
 
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+let Input = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-console.log('Gracz wpisał: ' + playerInput);
+console.log('Gracz wpisał: ' + Input);
 
-let playerMove = getMoveName(playerInput);
+let Move = getMoveName(Input);
 
 /*if(playerInput == '1'){
   playerMove = 'kamień';
