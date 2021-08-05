@@ -1,6 +1,6 @@
 function getMoveName(Input) {
   let move = 'nieznany ruch'
-  } 
+  
 	if(Input == '1'){
 	  move = 'kamień';
   } else if(Input== '2'){
@@ -46,25 +46,29 @@ if(computerInput == '1'){
 
 
 if( computerMove == 'kamień' && playemoveMove == 'papier'){
-    printMessage('Ty wygrywasz!');
-  } else if ( computerMove == 'papier' && playerMove == 'kamień'){
-    printMessage('Ty wygrywasz!');
-  } else if ( computerMove == 'nozyce' && playerMove == 'papier'){
-    printMessage('Ty wygrywasz!');
-  }
-
-if( playerMove == 'kamień' && computerMove == 'papier'){
-    printMessage('Ty przegrywasz!');
-  } else if ( playerMove == 'papier' && computerMove == 'kamień'){
-    printMessage('Ty przegrywasz!');
-  } else if ( playerMove == 'nozyce' && computerMove == 'papier'){
-    printMessage('Ty przegrywasz!');
-  }
-
-if( computerMove == 'kamień' && playerMove == 'kamień'){
+    printMessage('Wygrywasz!');
+  } else if ( computerMove == 'kamień' && playerMove == 'nozyce'){
+    printMessage('Przegrywasz!');
+  } else if ( computerMove == 'kamień' && playerMove == 'kamień'){
     printMessage('Remis!');
-  } else if ( computerMove == 'papier' && playerMove == 'papier'){
-    printMessage('Remis!');
-  } else if ( computerMove == 'nozyce' && playerMove == 'nozyce'){
-    printMessage('Remis!');
+  } else if (ComputerMove =='papier' && PlayerMove == 'kamień'){
+    printMessage('Przegrywasz :(');
+    computerScore = computerScore + 1;
+  } else if (ComputerMove =='papier' && PlayerMove == 'nozyce'){
+    printMessage('Wygrywasz!');
+    playerScore = playerScore + 1;
+  } else if (ComputerMove =='papier' && PlayerMove == 'papier'){
+    printMessage('Remis');
+  } else if (ComputerMove =='nozyce' && PlayerMove == 'papier'){
+    printMessage('Przegrywasz :(');
+    computerScore = computerScore + 1;
+  } else if (ComputerMove =='nozyce' && PlayerMove == 'kamień'){
+    printMessage('Wygrywasz!');
+    playerScore = playerScore + 1;
+  } else if (ComputerMove=='nozyce' && PlayerMove == 'nozyce'){
+    printMessage('Remis');
+  } else {
+    printMessage('Wybierz numer pomiędzy 1 a 3')
   }
+}
+displayResult(ComputerMove, PlayerMove);

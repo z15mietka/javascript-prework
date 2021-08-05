@@ -18,3 +18,6 @@ function getMoveName(playerInput) {
   }
   return playerMove
   }
+
+  function displayResult
+  	console.log('moves:', argComputerMove, argPlayerMove);
