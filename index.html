@@ -3,12 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cousine&family=Monoton&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header>
+		<h1>Papier-Kamien-nozyczki</h1>
+		<h2>Zagrajmy!</h2>
+	</header>
 	<div class="container">
-		<div id="buttons"></div>
+		<div id="buttons">
+			<button id="play-rock"><i class="far fa-hand-rock"></i><br>Kmien</button>
+			<button id="play-paper"><i class="far fa-hand-paper"></i><br>Papier</button>
+			<button id="play-scissors"><i class="far fa-hand-scissors"></i><br>Nozyczki</button>
+		</div>
 		<div id="messages"></div>
+		<div id="result"></div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>

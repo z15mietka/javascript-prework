@@ -1,5 +1,6 @@
 function getMoveName(Input) {
   let move = 'nieznany ruch'
+  console.log('Player move: ' + PlayerMove)
   
 	if(Input == '1'){
 	  move = 'kamień';
@@ -7,44 +8,44 @@ function getMoveName(Input) {
     move = 'papier';
   } else if(Input == '3'){
     move = 'nozyce';
+  } else {
+    printMessage('Nieznany ruch ' + MoveId + '.');
+    return 'Nieznany ruch';
   }
-  return move
-  }
+}
 
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = getMoveName(playerInput);
+function getMoveName(ComputerInput) {
+  let computerMove = getMoveName(computerInput);
 
-/*if(playerInput == '1'){
-  playerMove = 'kamień';
-} else if(playerInput== '2'){
-  playerMove = 'papier';
-} else if(playerInput == '3'){
-  playerMove = 'nozyce';
-}*/
-
+  if(computerInput == '1'){
+  computerMove = 'kamień';
+} else if(computerInput == '2'){
+    computerMove = 'papier';
+} else if(computerInput == '3'){
+    computerMove = 'nozyce';
+} else {
+  printMessage('Nieznany ruch ' + MoveId + '.');
+  return 'Nieznany ruch';
+}
+}
 
 console.log('Ruch gracza: ' + playerMove);
 
 
 let computerInput = Math.floor (Math.random() *3) + 1;
-
 console.log('Komputer wylosowal: ' + computerInput);
 
-let computerMove = getMoveName(computerInput);
-/*
-if(computerInput == '1'){
-    computerMove = 'kamień';
-  } else if(computerInput == '2'){
-      computerMove = 'papier';
-  } else if(computerInput == '3'){
-      computerMove = 'nozyce';
-  }*/
 
 
+const displayResult = function(ComputerMove, PlayerMove){
+    printMessage('Computer\'s move: ' + ComputerMove);
+    printMessage('Your move: ' + PlayerMove);
+    console.log('Function displayResult with arguments: ' + ComputerMove +', '+ PlayerMove + ' was called')
 if( computerMove == 'kamień' && playemoveMove == 'papier'){
     printMessage('Wygrywasz!');
   } else if ( computerMove == 'kamień' && playerMove == 'nozyce'){
@@ -72,3 +73,18 @@ if( computerMove == 'kamień' && playemoveMove == 'papier'){
   }
 }
 displayResult(ComputerMove, PlayerMove);
+ // printResult ("RESULT:")
+  printResult ('You '+ playerScore + ' - ' + computerScore + ' Computer');
+
+}
+
+document.getElementById('play-rock').addEventListener('click', function(){
+  playGame(1);
+});
+document.getElementById('play-paper').addEventListener('click', function(){
+  playGame(2);
+});
+document.getElementById('play-scissors').addEventListener('click', function(){
+  playGame(3);
+});
+}
